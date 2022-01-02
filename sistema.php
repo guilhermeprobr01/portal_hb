@@ -20,18 +20,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/icone1.png" type="image/x-icon">
     <link rel="stylesheet" href="estilo/sistema.css">
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
-
 
     <title>Portal - HB</title>
    
 </head>
 <body>
     
-        
+        <div class="l-navbar" id="navbar">
+                <nav class="nav">
+                        <div>
+                            <div class="nav__brand">
+                                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                                    <a href="#" class="nav__logo">Portal - HB</a>
+                            </div>
+                            <div class="nav__list">
+                                <a href="#" class="nav__link">
+
+                                    <span class="nav__name"></span>
+                                </a>
+
+                                <a href="#" class="nav__link">
+
+                                <span class="nav__name"></span>
+                                </a>
+
+                                <a href="#" class="nav__link">
+
+                                    <span class="nav__name"></span>
+                                </a>
+
+                                <a href="#" class="nav__link">
+
+                                    <span class="nav__name"></span>
+                                </a>
+                                  <a href="#" class="nav__link">
+
+                                    <span class="nav__name"></span>
+                                </a>
+                                  <a href="#" class="nav__link">
+
+                                    <span class="nav__name"></span>
+                                </a>
+                            </div>
+                        </div>
+                </nav>
+        </div>
 
 
 
@@ -49,8 +82,13 @@
         </div>
     </nav>
 -->
-    
 
-    
+
+            <!-- ===== IONICONS ===== -->
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+            <!-- ==== MAIN JS ==== -->
+            <script src="js/sistema.js"></script>
 </body>
 </html>
