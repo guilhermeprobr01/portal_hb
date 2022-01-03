@@ -1,33 +1,33 @@
 <?php
 
-    if (isset($_POST['submit'])) {
-        // print_r('Nome: ' . $_POST['nome']);
-        // print_r('<br>');
-        // print_r('Email: ' . $_POST['email']);
-        // print_r('<br>');
-        // print_r('Telefone: ' . $_POST['telefone']);
-        // print_r('<br>');
-        // print_r('Sexo: ' . $_POST['genero']);
-        // print_r('<br>');
-        // print_r('Data de nascimento: ' . $_POST['data_nascimento']);
-        // print_r('<br>');
-        // print_r('Cidade: ' . $_POST['cidade']);
-        // print_r('<br>');
-        // print_r('Estado: ' . $_POST['estado']);
-        // print_r('<br>');
-        // print_r('Endereço: ' . $_POST['endereco']);
+    include_once('config.php');
 
-        include_once('config.php');
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        
+        $nick = $_POST['nick'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $zap = $_POST['zap'];
+
+        $result = mysqli_query($conexao, "SELECT COUNT(*) FROM usuarios WHERE nick='$nick'");
+        $row = $result->fetch_row();
+        if ($row[0] > 0) {
+        echo "Nick já Cadastrado..";
+        } else {
+
 
         $nick = $_POST['nick'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $zap = $_POST['zap'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nick,senha,email,zap) 
-        VALUES ('$nick','$senha','$email','$zap')");
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nick,senha,email,zap) VALUES ('$nick', '$email', '$senha', '$zap')");
 
         header('Location: login.php');
+        }
+
+      
     
            
        
