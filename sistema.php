@@ -11,6 +11,8 @@
     $logado = $_SESSION['email'];
     $sql = "SELECT * FROM usuarios ORDER BY id DESC";
     $result = $conexao->query($sql);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,12 +21,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/icone1.png" type="image/x-icon">
-    <link rel="stylesheet" href="estilo/sistema.css">
+    <link rel="stylesheet" href="sistema.css">
 
     <title>Portal - HB</title>
    
 </head>
-<body>
+<body id="body-pd">
     
         <div class="l-navbar" id="navbar">
                 <nav class="nav">
@@ -35,32 +37,61 @@
                             </div>
                             <div class="nav__list">
                                 <a href="#" class="nav__link">
-
-                                    <span class="nav__name"></span>
+                                <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                                    <span class="nav__name">Dashboard</span>
                                 </a>
+
+                                <div class="nav__link  collapse">
+                                <ion-icon name="layers-outline" class="nav__icon"></ion-icon>
+                                <span class="nav__name">Departamentos</span>
+
+                                <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                                <ul class="collapse__menu">
+                                        <a href="#" class="collapse__sublink">Polìcia</a>
+                                        <a href="#" class="collapse__sublink">Hospital</a>
+                                        <a href="#" class="collapse__sublink">Org.</a>
+                                        <a href="#" class="collapse__sublink">Habbo</a>
+
+                                </ul>
+
+                                </div>
+                                
+
 
                                 <a href="#" class="nav__link">
-
-                                <span class="nav__name"></span>
+                                <ion-icon name="code-slash-outline" class="nav__icon"></ion-icon>
+                                    <span class="nav__name">Atualizações</span>
                                 </a>
 
-                                <a href="#" class="nav__link">
 
-                                    <span class="nav__name"></span>
-                                </a>
+                                <div class="nav__link collapse">
+                                <ion-icon name="newspaper-outline" class="nav__icon"></ion-icon>
+                                    <span class="nav__name">Entretenimento</span>
 
-                                <a href="#" class="nav__link">
+                                <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
 
-                                    <span class="nav__name"></span>
-                                </a>
+                                        <ul class="collapse__menu">
+                                        <a href="#" class="collapse__sublink">Polìcia</a>
+                                        <a href="#" class="collapse__sublink">Hospital</a>
+                                        <a href="#" class="collapse__sublink">Org.</a>
+                                        <a href="#" class="collapse__sublink">Entretenimento</a>
+                                </ul>
+                                   
+                                </div>
+
+
                                   <a href="#" class="nav__link">
-
-                                    <span class="nav__name"></span>
+                                  <ion-icon name="person-outline" class="nav__icon"></ion-icon>
+                                    <span class="nav__name">Perfil</span>
                                 </a>
-                                  <a href="#" class="nav__link">
 
-                                    <span class="nav__name"></span>
+                                
+                                  <div class="yu"><a href="sair.php" class="nav__link">
+                                    <ion-icon name="exit-outline" class="nav__icon"></ion-icon>
+                                    <span class="nav__name">Sair</span>
                                 </a>
+                                </div>
                             </div>
                         </div>
                 </nav>
@@ -84,11 +115,13 @@
 -->
 
 
+            <h1 class="user">Bem vindo(a) de volta!</h1>
+
             <!-- ===== IONICONS ===== -->
             <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
             <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
             <!-- ==== MAIN JS ==== -->
-            <script src="js/sistema.js"></script>
+            <script src="sistema.js"></script>
 </body>
 </html>

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Condensed:wght@300&family=Sarala:wght@400;700&display=swap');
+
+body {
+        background-image: rgb(158, 158, 158);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+/* ======= VARIABLES CSS ======= */
+
+:root   {
+
+        --nav-width: 92px;
+
+
+
+/* ======= COLORES ======= */
+
+        --first-color: #0C5DF4;
+        --bg-color: #12192C;
+        --sub-color: #B6CEFC;
+        --white-color: #FFF;
+
+/* ======= FUENTE Y TIPOGRAFIA ======= */
+
+        --body-font: 'Sarala', sans-serif;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+
+
+/* ======= Z INDEX ======= */
+
+        --z-fixed: 100;
+
+}
+
+/* ======= VARIABLES CSS ======= */
+
+*,::before, ::after{
+
+        box-sizing: border-box;
+
+}
+body {
+
+        position: relative;
+        margin: 0;
+        padding: 2rem 0 0 6.75rem;
+        font-family: var(--body-font);
+        font-size: var(--normal-font-size);
+        transition: .5s;
+
+}
+h1 {
+
+        margin: 0;
+
+}
+ul {
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+}
+a {
+         
+        text-decoration: none;
+        
+
+}
+
+/* ======= L - NAV ======= */
+
+.l-navbar {
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--nav-width);
+        height: 100vh;
+        background-color: var(--bg-color);
+        color: white;
+        padding: 1.5rem 1.5rem 2rem;
+        transition: .5s;
+        z-index: var(--z-fixed);
+}
+
+/* ======= NAV ======= */
+
+.nav {
+
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                overflow: hidden;
+}
+.nav__brand {
+
+        display: grid;
+        grid-template-columns: max-content max-content;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+}
+.nav__toggle {
+
+                font-size: 1.5rem;
+                padding: .75rem;
+                cursor: pointer;
+}
+.nav__logo {
+
+                color: var(--white-color);
+                font-weight: 600;
+
+}
+.nav__link {
+
+                display: grid;
+                grid-template-columns: max-content max-content;
+                align-items: center;
+                column-gap: .75rem;
+                padding: .75rem;
+                color: var(--white-color);
+                border-radius: .5rem;
+                margin-bottom: 1rem;
+                transition: .3s;
+                cursor: pointer;
+
+}
+.nav__link:hover {
+
+                background-color: var(--first-color);
+
+}
+.nav__icon {
+
+                font-size: 1.25rem;
+}
+.nav__name {
+
+                font-size: var(--small-font-size);
+                
+}
+
+
+/* ======= Expandir MENU ======= */
+
+.expander {
+        width: calc(var(--nav-width) + 9.25rem );
+}
+
+/* ======= ADD PADING BODY ======= */
+
+.body-pd {
+
+                padding: 2rem 0 0 16rem;
+}
+
+/* ======= LINK ATIVADO ======= */
+
+.active {
+
+                background-color: var(--first-color);
+
+}
+/* =======  COLAPSE ======= */
+
+.collapse {
+
+                grid-template-columns: 20px max-content 1fr;
+}
+.collapse__link {
+
+                justify-self: flex-end;
+                transition: .5s;
+}
+.collapse__menu {
+
+                display: none;
+                padding: .75rem 2.25rem;
+
+}
+.collapse__sublink {
+
+                color: var(--sub-color);
+                font-size: var(--small-font-size);
+}
+.collapse__sublink:hover {
+
+                color: var(--white-color);
+}
+/* ======= SHOW COLLAPSE ======= */
+
+.showCollapse {
+
+                display: block;
+
+}
+
+/* ======= ROATE ICON ======= */
+
+.rotate {
+
+                transform: rotate(180deg);
+                transition: .5s;
+}
+.user {
+
+                color: rgb(62, 62, 62);
+                font-size: 20px;
+}

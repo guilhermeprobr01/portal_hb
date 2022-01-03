@@ -1,7 +1,6 @@
 <?php
 
-    if(isset($_POST['submit']))
-    {
+    if (isset($_POST['submit'])) {
         // print_r('Nome: ' . $_POST['nome']);
         // print_r('<br>');
         // print_r('Email: ' . $_POST['email']);
@@ -23,11 +22,15 @@
         $nick = $_POST['nick'];
         $email = $_POST['email'];
         $senha = $_POST['senha'];
+        $zap = $_POST['zap'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nick,senha,email) 
-        VALUES ('$nick','$senha','$email')");
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nick,senha,email,zap) 
+        VALUES ('$nick','$senha','$email','$zap')");
 
         header('Location: login.php');
+    
+           
+       
     }
 
 ?>
@@ -73,6 +76,12 @@
                                                     <input type="email" placeholder="Seu email..." id="email" name="email" required>
                                                     <label for="email">
                                                         <img src="./img/avatar.svg" alt="Email" >
+                                                    </label>
+                                                </div>
+                                                <div class="input-field">
+                                                    <input type="tel" placeholder="Seu zap..." id="zap" name="zap" required>
+                                                    <label for="zap">
+                                                        <img src="./img/avatar.svg" alt="zap" >
                                                     </label>
                                                 </div>
                                                 <div class="input-field">
