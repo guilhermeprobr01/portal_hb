@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/icone1.png" type="image/x-icon">
-    <link rel="stylesheet" href="estilo/home.css">
+    <link rel="stylesheet" href="home.css">
     <meta name="description" content="Portal de Notícias do Habbo, trazendo pesquisas novidades, e diversão para você! Notícias Habbo, Fâ Site Habbo.">
     <!-- Última versão CSS compilada e minificada -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <title>Portal - HB</title>
-
+    <style>
+        body {
+            background-color: rgb(58, 58, 58);
+        }
+    </style>
 </head>
 <body>
 

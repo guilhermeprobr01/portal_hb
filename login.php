@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo/index.css" id="223"> 
+    <link rel="stylesheet" href="index.css" id="223"> 
     <link rel="shortcut icon" href="img/icone1.png" type="image/x-icon">
     <title>Tela de login</title>
   
-    
+        <style>
+            body{
+                background-color: rgb(58, 58, 58);
+            }
+        </style>
 </head>
 <body>
        

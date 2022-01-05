@@ -33,6 +33,8 @@
        
     }
 
+
+
 ?>
 
 
@@ -43,19 +45,20 @@
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <meta http-equiv="X-UA-Compatible" content="IE=7">
-                    <link rel="stylesheet" href="estilo/index.css" id="223"> 
+                    <link rel="stylesheet" href="index.css"> 
                     
                     <link rel="shortcut icon" href="img/icone1.png" type="image/x-icon">
                     <!--Id: 223 head link css index-->
 
                     <title>Portal - HB</title>
+<style>
+    body {
+        background-color: rgb(58, 58, 58);
+    }
+    
+</style>
 
-
-                    <style>
-                        body{
-                        background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-                        }
-                    </style>
+                   
 </head>
 <body>
             <!--Contém todo o Conteúdo class = "Content"-->

@@ -12,7 +12,15 @@
     $sql = "SELECT * FROM usuarios ORDER BY id DESC";
     $result = $conexao->query($sql);
 
+    // Função para pegar o nome de usuário logado
+    function getUser() {
+        global $conexao;
 
+        $result = $conexao->query("SELECT * FROM usuarios WHERE email = '".$_SESSION['email']."'")->fetch_assoc();
+        return ucfirst($result['nick']);
+
+        //obs: ucfirst() deixa a primeira letra maiuscula.
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -115,7 +123,7 @@
 -->
 
 
-            <h1 class="user">Bem vindo(a) de volta!</h1>
+            <h1 class="user">Bem vindo(a) de volta <?php echo getUser(); ?>!</h1>
 
             <!-- ===== IONICONS ===== -->
             <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
