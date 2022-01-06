@@ -63,11 +63,12 @@
                                 <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
 
                                 <ul class="collapse__menu">
+                                    <li class="tte">
                                         <a href="sub_pg/policia.php" class="collapse__sublink" target="kas">Polícia</a>
                                         <a href="sub_pg/hospital.php" class="collapse__sublink" target="kas">Hospital</a>
                                         <a href="sub_pg/org.php" class="collapse__sublink" target="kas">Org.</a>
                                         <a href="sub_pg/habbo.php" class="collapse__sublink" target="kas">Habbo</a>
-
+                                        </li>
                                 </ul>
 
                                 </div>

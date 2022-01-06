@@ -35,35 +35,6 @@
        
     }
 ?>
-<?php
-function getInfo($user) {
-    $url = 'https://www.habbo.com.br/api/public/users?name='.$user;
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36');
-    curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, true);
-    $result = curl_exec($ch);
-    curl_close($ch); 
-
-    $json = json_decode($result, true);
-    return $json['motto'];
-}
-
-$missao = "fasite5bhabbo";
-$resultado = null;
-
-if($_POST) {
-    $user = isset($_POST['user']) ? $_POST['user'] : '';
-    $mottoUser = getInfo($user);
-
-    if($missao == $mottoUser) {
-        $resultado = '<hr />Missão Confirmada';
-    } else {
-        $resultado = "<hr />Missão não confirmada";
-    }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="pt-Br">
@@ -134,7 +105,7 @@ if($_POST) {
                                         <span><a href="login.php">Já tem uma conta?</a></span>
                                         <a href="login.php">Entrar</a>
                             </footer>
-                            <p class="ty" style="color: white; font-size:17px; font-family: Rubik; font-weight: 300; padding-top:20px; text-align: center;">Coloque a seguinte missão: <b><?php echo $missao; ?></p>
+                            
             </div>
 </body>
 </html>
