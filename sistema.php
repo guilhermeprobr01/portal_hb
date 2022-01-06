@@ -34,8 +34,15 @@
     <title>Portal - HB</title>
    
 </head>
+
+
 <body id="body-pd">
-    
+
+
+
+
+
+
         <div class="l-navbar" id="navbar">
                 <nav class="nav">
                         <div>
@@ -56,10 +63,10 @@
                                 <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
 
                                 <ul class="collapse__menu">
-                                        <a href="#" class="collapse__sublink">Polìcia</a>
-                                        <a href="#" class="collapse__sublink">Hospital</a>
-                                        <a href="#" class="collapse__sublink">Org.</a>
-                                        <a href="#" class="collapse__sublink">Habbo</a>
+                                        <a href="sub_pg/policia.php" class="collapse__sublink" target="kas">Polícia</a>
+                                        <a href="sub_pg/hospital.php" class="collapse__sublink" target="kas">Hospital</a>
+                                        <a href="sub_pg/org.php" class="collapse__sublink" target="kas">Org.</a>
+                                        <a href="sub_pg/habbo.php" class="collapse__sublink" target="kas">Habbo</a>
 
                                 </ul>
 
@@ -69,7 +76,7 @@
 
                                 <a href="#" class="nav__link">
                                 <ion-icon name="code-slash-outline" class="nav__icon"></ion-icon>
-                                    <span class="nav__name">Atualizações</span>
+                                    <span class="nav__name">Sugerir</span>
                                 </a>
 
 
@@ -80,10 +87,11 @@
                                 <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
 
                                         <ul class="collapse__menu">
-                                        <a href="#" class="collapse__sublink">Polìcia</a>
-                                        <a href="#" class="collapse__sublink">Hospital</a>
-                                        <a href="#" class="collapse__sublink">Org.</a>
-                                        <a href="#" class="collapse__sublink">Entretenimento</a>
+                                        <a href="sub_pgl/pes.php" class="collapse__sublink" target="kas">Pesquisas</a>
+                                        <a href="sub_pgl/pod.php" class="collapse__sublink" target="kas">Podcast</a>
+                                        <a href="sub_pgl/mu.php" class="collapse__sublink" target="kas">Música</a>
+                                        <a href="sub_pgl/vir.php" class="collapse__sublink" target="kas">Vídeos</a>
+                                        <a href="sub_pgl/sortei.php" class="collapse__sublink" target="kas">Sorteios</a>
                                 </ul>
                                    
                                 </div>
@@ -124,6 +132,12 @@
 
 
             <h1 class="user">Bem vindo(a) de volta <?php echo getUser(); ?>!</h1>
+
+
+                <!-- IFRAMES -->
+
+            <iframe src="sub_pg/policia.php" frameborder="0" name="kas" transparency="true" scrolling="no" frameborder="0"></iframe>
+            
 
             <!-- ===== IONICONS ===== -->
             <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

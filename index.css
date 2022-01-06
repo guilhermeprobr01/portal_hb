@@ -30,6 +30,7 @@ body, html {
 
 }
 
+
 header {
 
         display: flex;
@@ -197,6 +198,7 @@ main form {
      font-family: "Rubik";
      transition: .3s;
      margin-top: 20px;
+     text-align: ;
 
 }
 

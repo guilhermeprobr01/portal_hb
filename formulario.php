@@ -5,38 +5,65 @@
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         
-        $nick = $_POST['nick'];
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
-        $zap = $_POST['zap'];
+            $nick = $_POST['nick'];
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+            $zap = $_POST['zap'];
 
-        $result = mysqli_query($conexao, "SELECT COUNT(*) FROM usuarios WHERE nick='$nick'");
-        $row = $result->fetch_row();
-        if ($row[0] > 0) {
-        echo "Nick já Cadastrado..";
-        } else {
+            $result = mysqli_query($conexao, "SELECT COUNT(*) FROM usuarios WHERE nick='$nick'");
+            $result2 = mysqli_query($conexao, "SELECT COUNT(*) FROM usuarios WHERE email='$email'")->fetch_row();
+            $row = $result->fetch_row();
 
+            if ($row[0] > 0) {
 
-        $nick = $_POST['nick'];
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
-        $zap = $_POST['zap'];
+            echo "Nick já Cadastrado..";
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nick,senha,email,zap) VALUES ('$nick', '$email', '$senha', '$zap')");
+            } else if ($result2[0] > 0) {
+                echo "Email já cadastrado";
+            } else {
+                $nick = $_POST['nick'];
+                $email = $_POST['email'];
+                $senha = $_POST['senha'];
+                $zap = $_POST['zap'];
 
-        header('Location: login.php');
-        }
+                $result = mysqli_query($conexao, "INSERT INTO usuarios(nick,senha,email,zap) VALUES ('$nick', '$email', '$senha', '$zap')");
 
-      
-    
+                header('Location: login.php');
+            }
+
            
        
     }
-
-
-
 ?>
+<?php
+function getInfo($user) {
+    $url = 'https://www.habbo.com.br/api/public/users?name='.$user;
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36');
+    curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, true);
+    $result = curl_exec($ch);
+    curl_close($ch); 
 
+    $json = json_decode($result, true);
+    return $json['motto'];
+}
+
+$missao = "fasite5bhabbo";
+$resultado = null;
+
+if($_POST) {
+    $user = isset($_POST['user']) ? $_POST['user'] : '';
+    $mottoUser = getInfo($user);
+
+    if($missao == $mottoUser) {
+        $resultado = '<hr />Missão Confirmada';
+    } else {
+        $resultado = "<hr />Missão não confirmada";
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-Br">
@@ -66,10 +93,13 @@
                             <header>
                               <img src="img/sdulogo.svg" alt="Logo">
                                 <h1>Portal HB</h1>
+                                
                             </header>
+                            
                             <main>
                                 <form action="formulario.php" method="POST">
                                                 <div class="input-field">
+                                                
                                                     <input type="text" placeholder="Seu Nick..." id="text" name="nick" required>
                                                     <label for="text">
                                                         <img src="./img/avatar.svg" alt="Usuário do Habbo" >
@@ -94,13 +124,17 @@
                                                                 </label>
                                                 </div>
                                                 
+                                                
                                                 <input type="submit" value="Cadastrar" class="btn" name="submit">
+                                             
                                 </form>
+                               
                             </main>
-                            <footer>
+                            <footer style="padding-top: 8px;">
                                         <span><a href="login.php">Já tem uma conta?</a></span>
                                         <a href="login.php">Entrar</a>
                             </footer>
+                            <p class="ty" style="color: white; font-size:17px; font-family: Rubik; font-weight: 300; padding-top:20px; text-align: center;">Coloque a seguinte missão: <b><?php echo $missao; ?></p>
             </div>
 </body>
 </html>
