@@ -2,6 +2,21 @@
 
     include_once('config.php');
 
+    function getInfo($user) {
+        $url = 'https://www.habbo.com.br/api/public/users?name='.$user;
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36');
+        curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, true);
+        $result = curl_exec($ch);
+        curl_close($ch); 
+    
+        $json = json_decode($result, true);
+        return $json['motto'];
+    }
+
+    $resultado = null;
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         
@@ -16,10 +31,12 @@
 
             if ($row[0] > 0) {
 
-            echo "Nick já Cadastrado..";
+                $resultado = "Nick já Cadastrado..";
 
             } else if ($result2[0] > 0) {
-                echo "Email já cadastrado";
+                $resultado = "Email já cadastrado";
+            } else if (getInfo($nick) != "PortalHB") {
+                $resultado =  "Missão incorreta";
             } else {
                 $nick = $_POST['nick'];
                 $email = $_POST['email'];
@@ -68,6 +85,8 @@
                             </header>
                             
                             <main>
+                               <h3 style="color: white;">Coloque sua missão no Habbo: PortalHB</h3>
+                               <div style="color: red; font-weight: bold; font-size: 17px;"><?php echo $resultado; ?></div>
                                 <form action="formulario.php" method="POST">
                                                 <div class="input-field">
                                                 

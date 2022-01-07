@@ -8,19 +8,19 @@
         unset($_SESSION['senha']);
         header('Location: login.php');
     }
-    $logado = $_SESSION['email'];
+    $logado = $_SESSION['nick'];
     $sql = "SELECT * FROM usuarios ORDER BY id DESC";
     $result = $conexao->query($sql);
 
     // Função para pegar o nome de usuário logado
-    function getUser() {
-        global $conexao;
+    // function getUser() {
+    //     global $conexao;
 
-        $result = $conexao->query("SELECT * FROM usuarios WHERE email = '".$_SESSION['email']."'")->fetch_assoc();
-        return ucfirst($result['nick']);
+    //     $result = $conexao->query("SELECT * FROM usuarios WHERE email = '".$_SESSION['email']."'")->fetch_assoc();
+    //     return ucfirst($result['nick']);
 
-        //obs: ucfirst() deixa a primeira letra maiuscula.
-    }
+    //     //obs: ucfirst() deixa a primeira letra maiuscula.
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -132,7 +132,7 @@
 -->
 
 
-            <h1 class="user">Bem vindo(a) de volta <?php echo getUser(); ?>!</h1>
+            <h1 class="user">Bem vindo(a) de volta <?php echo ucfirst($_SESSION['nick']); ?>!</h1>
 
 
                 <!-- IFRAMES -->

@@ -26,9 +26,9 @@
 
                                 <nav class="cabecalho-menu">
 
-                                    <a href="home.php" class="cabecalho-menu-intem">Início</a>
-                                    <a href="formulario.php" class="cabecalho-menu-intem">Cadastro</a>
-                                    <a href="login.php" class="cabecalho-menu-intem">Login</a>
+                                    <a href="home" class="cabecalho-menu-intem">Início</a>
+                                    <a href="formulario" class="cabecalho-menu-intem">Cadastro</a>
+                                    <a href="login" class="cabecalho-menu-intem">Login</a>
 
                                 </nav>
 
