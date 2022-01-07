@@ -11,8 +11,8 @@
 
     <style>
 .accordion {
-  background-color: #eee;
-  color: #444;
+  
+  
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -24,9 +24,9 @@
 }
 
 .active, .accordion:hover {
-  background-color: #ccc; 
-}
-
+    background-color: rgb(0, 0, 0); 
+    color: white;
+  }
 .panel {
   padding: 0 18px;
   display: none;
@@ -65,6 +65,11 @@ body{
 </div>
 
 <button class="accordion">Parcerias</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Desenvolvimento</></button>
 <div class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>

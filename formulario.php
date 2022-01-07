@@ -2,6 +2,8 @@
 
     include_once('config.php');
 
+
+
     function getInfo($user) {
         $url = 'https://www.habbo.com.br/api/public/users?name='.$user;
         $ch = curl_init();
@@ -20,7 +22,7 @@
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         
-            $nick = $_POST['nick'];
+            $nick = addslashes($_POST['nick']);
             $email = $_POST['email'];
             $senha = $_POST['senha'];
             $zap = $_POST['zap'];
