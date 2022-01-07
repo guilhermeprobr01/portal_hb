@@ -12,6 +12,9 @@
             body{
                 background-color: rgb(58, 58, 58);
             }
+            .top:hover{
+                    color: blue;
+            }
         </style>
 </head>
 <body>
@@ -37,7 +40,7 @@
                                                                 </label>
                                                 </div>
                                                 <div class="check">
-                                                                <input type="checkbox" checked id="remind-pass">
+                                                                <input type="checkbox" checked id="remind-pass" >
                                                                 <label for="remind-pass">Lembrar Senha</label>
                                                 </div>
                                                 <input class="btn" type="submit" name="submit" value="Enviar">
@@ -46,7 +49,20 @@
                             <footer>
                                         <span><a href="#">Esqueci minha senha</a></span>
                                         <a href="formulario.php">Criar Conta</a>
+                                        
                             </footer>
+                            <p style="text-align: center;padding-top: 13px;
+     color: white;
+     font-size: 14px;
+     font-family: Poppins;">
+                    <a href="ajuda.php" style="text-decoration: none;
+     outline: none;
+     color: rgb(110, 117, 162);
+      ">Problemas para entrar? Clique aqui.</a>
+                </p>
             </div> 
+            
+
+            
 </body>
 </html>

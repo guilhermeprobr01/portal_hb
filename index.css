@@ -152,6 +152,7 @@ main form {
      font-size: 1.8rem;
      cursor: pointer;
      transition: 0.3s;
+     
 
 }
 
@@ -311,5 +312,13 @@ footer span a:hover {
             font-size: 1.4rem;
 
          }
+
+}
+.ajuda {
+     
+     text-decoration: none;
+     outline: none;
+     color: rgb(110, 117, 162);
+
 
 }
