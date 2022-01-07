@@ -35,7 +35,7 @@
 
             } else if ($result2[0] > 0) {
                 $resultado = "Email já cadastrado";
-            } else if (getInfo($nick) != "PortalHB") {
+            } else if (getInfo($nick) != "PortalHB2022") {
                 $resultado =  "Missão incorreta";
             } else {
                 $nick = $_POST['nick'];
@@ -43,7 +43,7 @@
                 $senha = $_POST['senha'];
                 $zap = $_POST['zap'];
 
-                $result = mysqli_query($conexao, "INSERT INTO usuarios(nick,senha,email,zap) VALUES ('$nick', '$email', '$senha', '$zap')");
+                $result = mysqli_query($conexao, "INSERT INTO usuarios(nick,email,senha,zap) VALUES ('$nick', '$email', '$senha', '$zap')");
 
                 header('Location: login.php');
             }
@@ -70,7 +70,7 @@
     body {
         background-color: rgb(58, 58, 58);
     }
-    
+   
 </style>
 
                    
@@ -85,12 +85,12 @@
                             </header>
                             
                             <main>
-                               <h3 style="color: white;">Coloque sua missão no Habbo: PortalHB</h3>
-                               <div style="color: red; font-weight: bold; font-size: 17px;"><?php echo $resultado; ?></div>
+                               <h3 class="gouf" style="color: #aeaeae; font-family: Poppins; font-size: 14px;">Coloque sua missão no Habbo: PortalHB2022</h3>
+                               <div style="color: green; font-size: 14px; font-family: Poppins;"><?php echo $resultado; ?></div>
                                 <form action="formulario.php" method="POST">
                                                 <div class="input-field">
                                                 
-                                                    <input type="text" placeholder="Seu Nick..." id="text" name="nick" required>
+                                                    <input type="text" placeholder="Seu Nick..." id="text" name="nick">
                                                     <label for="text">
                                                         <img src="./img/avatar.svg" alt="Usuário do Habbo" >
                                                     </label>
@@ -120,7 +120,7 @@
                                 </form>
                                
                             </main>
-                            <footer style="padding-top: 8px;">
+                            <footer style="padding-top: 49px;">
                                         <span><a href="login.php">Já tem uma conta?</a></span>
                                         <a href="login.php">Entrar</a>
                             </footer>

@@ -90,6 +90,7 @@ main form {
         transition: .3s;
         margin-top: 8px;
         
+        
 
 }
 
@@ -198,7 +199,7 @@ main form {
      font-family: "Rubik";
      transition: .3s;
      margin-top: 20px;
-     text-align: ;
+     
 
 }
 
@@ -226,6 +227,7 @@ main form {
      align-items: center;
      height: 20%;
      border-bottom: 2px solid #def7f478;
+     
 
 }
 

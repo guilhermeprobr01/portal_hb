@@ -25,8 +25,8 @@
                             <main>
                             <form  action="testLogin.php" method="POST">
                                                 <div class="input-field">
-                                                    <input type="text" name="email" placeholder="Email" required>
-                                                    <label for="email">
+                                                    <input type="text" name="email" placeholder="Nick" required>
+                                                    <label for="Nick">
                                                         <img src="./img/avatar.svg" alt="Usuário do Habbo" >
                                                     </label>
                                                 </div>
