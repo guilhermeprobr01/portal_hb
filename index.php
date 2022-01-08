@@ -28,7 +28,7 @@
 
                                 <nav class="cabecalho-menu">
 
-                                    <a href="home" class="cabecalho-menu-intem">Início</a>
+                                    <a href="index" class="cabecalho-menu-intem">Início</a>
                                     <a href="formulario" class="cabecalho-menu-intem">Cadastro</a>
                                     <a href="login" class="cabecalho-menu-intem">Login</a>
 

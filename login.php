@@ -55,7 +55,7 @@
      color: white;
      font-size: 14px;
      font-family: Poppins;">
-                    <a href="ajuda.php" style="text-decoration: none;
+                    <a href="ajuda" style="text-decoration: none;
      outline: none;
      color: rgb(110, 117, 162);
       ">Problemas para entrar? Clique aqui.</a>

@@ -21,6 +21,7 @@
   outline: none;
   font-size: 15px;
   transition: 0.9s;
+  color: rgb(182, 182, 182);
 }
 
 .active, .accordion:hover {
