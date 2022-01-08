@@ -33,11 +33,40 @@
 
     <title>Portal - HB</title>
    
+
+
+    <style>
+        .lsd{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 0px;
+            margin: 1px 10px 1px 1px;
+            margin-left: 20px;
+            
+        }
+        .lsd1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+        h1{
+            margin-top: 0px;
+        }
+        .play1{
+            width: 16px;
+            cursor: pointer;
+        }
+        .play2{
+            width: 16px;
+            cursor: pointer;
+        }
+   
+       
+    </style>
 </head>
 
 
 <body id="body-pd">
-
 
 
 
@@ -130,14 +159,31 @@
         </div>
     </nav>
 -->
+<audio id="audio">
+				<source src="https://node-22.zeno.fm/p56794zqachvv?rj-ttl=5&amp;rj-tok=AAABfjbt7aQAVXbGx1cqY1VYSg" type="audio/ogg">
+				<source src="https://node-22.zeno.fm/p56794zqachvv?rj-ttl=5&amp;rj-tok=AAABfjbt7aQAVXbGx1cqY1VYSg" type="audio/mpeg">
+				Seu navegador não possui suporte ao elemento audio
+			</audio>
 
 
+
+<div class="lsd1">
             <h1 class="user">Bem vindo(a) de volta <?php echo ucfirst($_SESSION['nick']); ?>!</h1>
+            <div class="lsd">
+                <img src="play.png" alt="" onclick="play()" class="play1">
+        
+            <img src="pausa.png" alt="" onclick="pause()" class="play2">
+				
+            </div>
+</div>
 
+                    
 
                 <!-- IFRAMES -->
 
             <iframe src="sub_pg/policia.php" frameborder="0" name="kas" transparency="true" scrolling="no" frameborder="0"></iframe>
+
+           
             
 
             <!-- ===== IONICONS ===== -->
@@ -146,5 +192,38 @@
 
             <!-- ==== MAIN JS ==== -->
             <script src="sistema.js"></script>
+            <script>
+			audio = document.getElementById('audio');
+			
+			function play(){
+				audio.play();
+			}
+
+			function pause(){
+				audio.pause();
+			}
+
+			function stop(){
+				audio.pause();
+				audio.currentTime = 0;
+			}
+
+			function aumentar_volume(){
+				if( audio.volume < 1)  audio.volume += 0.1;
+			}
+
+			function diminuir_volume(){
+				if( audio.volume > 0)  audio.volume -= 0.1;
+			}
+			
+			function mute(){
+				if( audio.muted ){
+					audio.muted = false;
+				}else{
+					audio.muted = true;
+				}
+			}
+
+		</script>
 </body>
 </html>

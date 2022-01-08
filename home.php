@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="img/icone1.png" type="image/x-icon">
     <link rel="stylesheet" href="home.css">
     <meta name="description" content="Portal de Notícias do Habbo, trazendo pesquisas novidades, e diversão para você! Notícias Habbo, Fâ Site Habbo.">
+    <meta property="og:title" content="Portal HB - Um novo conceito de diversão!"/>
+        <meta property="og:description" content="Portal HB, portal de notícias do Habbo Hotel!"/>
     <!-- Última versão CSS compilada e minificada -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
