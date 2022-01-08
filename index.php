@@ -45,7 +45,7 @@
                                         <h1 class="conteudo-principal-escrito-titulo">Portal HB</h1>
                                         <h2 class="conteudo-principal-escrito-subtitulo">Portal de Notícias Habbiana, com conteúdos atualizados sobre o Habbo!</h2>
                                        
-                                        <button type="submit" class="conteudo-principal-escrito-botao"><a href="formulario.php">Entrar</a></button>
+                                        <button type="submit" class="conteudo-principal-escrito-botao"><a href="formulario">Entrar</a></button>
 
                                 </div>
                                 <img src="img/icone.png" alt="Logo"  class="conteudo-principal-imagem">
@@ -77,7 +77,7 @@
                 <!-- Copyright -->
                  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                     © 2020 Copyright:
-                    <a class="text-dark" href="#">Portal HB</a>
+                    <a class="text-dark" href="ajuda">Portal HB</a>
                  </div>
                  <!-- Copyright -->     
             </footer>

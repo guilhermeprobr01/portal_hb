@@ -47,8 +47,8 @@
                                 </form>
                             </main>
                             <footer>
-                                        <span><a href="#">Esqueci minha senha</a></span>
-                                        <a href="formulario.php">Criar Conta</a>
+                                        <span><a href="ajuda">Esqueci minha senha</a></span>
+                                        <a href="formulario">Criar Conta</a>
                                         
                             </footer>
                             <p style="text-align: center;padding-top: 13px;

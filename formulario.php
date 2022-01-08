@@ -123,8 +123,8 @@
                                
                             </main>
                             <footer style="padding-top: 49px;">
-                                        <span><a href="login.php">Já tem uma conta?</a></span>
-                                        <a href="login.php">Entrar</a>
+                                        <span><a href="login">Já tem uma conta?</a></span>
+                                        <a href="login">Entrar</a>
                             </footer>
                             
             </div>
